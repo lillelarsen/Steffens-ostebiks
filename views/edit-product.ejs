@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <% if (flash) { %> 
+           <div class="alert <%= flash.type %>">
+               <%= flash.message %>
+           </div>
+        <% } %>
+        <form action="" method="post">
+        name
+        <input type="text" name="name" value="<%= typeof product.name != 'undefined' ? product.name : '' %>">
+        descrip
+        <textarea name="description" cols="30" rows="10"><%= typeof product.description != 'undefined' ? product.description : '' %></textarea>
+        price
+        <input type="number" name="price" value="<%= typeof product.price != 'undefined' ? product.price : '' %>">
+        <button type="submit">Redigér</button>
+    </form>
+</body>
+</html>
